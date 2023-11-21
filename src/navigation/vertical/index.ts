@@ -14,6 +14,26 @@ const navigation = (): VerticalNavItemsType => {
       icon: 'tabler:mail'
     },
     {
+      title: 'Consignment',
+      path: '/conssigment/All',
+      icon: 'tabler:mail'
+    },
+    {
+      title: 'Return',
+      path: '/return/All',
+      icon: 'tabler:mail'
+    },
+    {
+      title: 'NDR',
+      path: '/NDR/ActionRequired',
+      icon: 'tabler:mail'
+    },
+    {
+      title: 'Weight Management',
+      path: '/weightmanagement/ActionRequired',
+      icon: 'tabler:mail'
+    },
+    {
       path: '/acl',
       action: 'read',
       subject: 'acl-page',

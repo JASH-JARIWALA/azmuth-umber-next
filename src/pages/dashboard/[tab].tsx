@@ -11,11 +11,13 @@ import { Box, Button } from '@mui/material'
 import { useRouter } from 'next/router'
 import DashboardPage from 'src/views/pages/dashboard/DashboardPage'
 
-import OrderPage from 'src/views/pages/order/OrderPage'
-import ShipmentPage from 'src/views/pages/Shipements/ShipmentPage'
-import NDRPage from 'src/views/pages/NDR/NDRPage'
-import WhatsappComm from 'src/views/pages/WhatsappComm/WhatsappComm'
-import RTOPage from 'src/views/pages/RTO/RTOPage'
+import OrderPage from 'src/views/pages/dashboard/order/OrderPage'
+import ShipmentPage from 'src/views/pages/dashboard/Shipements/ShipmentPage'
+import NDRPage from 'src/views/pages/dashboard/NDR/NDRPage'
+import WhatsappComm from 'src/views/pages/dashboard/WhatsappComm/WhatsappComm'
+import RTOPage from 'src/views/pages/dashboard/RTO/RTOPage'
+import DelaysMainPage from 'src/views/pages/dashboard/Delays/DelaysMainPage'
+import CouriorPage from 'src/views/pages/dashboard/Courior/CouriorPage'
 
 const GeneralSettingsUser = ({ tab }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
@@ -65,7 +67,9 @@ const GeneralSettingsUser = ({ tab }: InferGetStaticPropsType<typeof getStaticPr
       </Box>
       {tab === 'Overview' && (
         <>
-          <DashboardPage />
+          <Box sx={{ mt: 5 }}>
+            <DashboardPage />
+          </Box>
         </>
       )}
       {tab === 'Order' && (
@@ -80,24 +84,39 @@ const GeneralSettingsUser = ({ tab }: InferGetStaticPropsType<typeof getStaticPr
       )}
       {tab === 'NDR' && (
         <>
-          <NDRPage />
+          <Box sx={{ mt: 5 }}>
+            <NDRPage />
+          </Box>
         </>
       )}
       {tab === 'WhatsApp Comm' && (
         <>
-          <WhatsappComm />
+          <Box sx={{ mt: 5 }}>
+            <WhatsappComm />
+          </Box>
         </>
       )}
       {tab === 'RTO' && (
         <>
-          <RTOPage />
+          <Box sx={{ mt: 5 }}>
+            <RTOPage />
+          </Box>
         </>
       )}
-      {/* {tab === 'Delays' && (
+      {tab === 'Courier' && (
         <>
-          <DelayPage />
+          <Box sx={{ mt: 5 }}>
+            <CouriorPage />
+          </Box>
         </>
-      )} */}
+      )}
+      {tab === 'Delays' && (
+        <>
+          <Box sx={{ mt: 5 }}>
+            <DelaysMainPage />
+          </Box>
+        </>
+      )}
     </div>
   )
 }

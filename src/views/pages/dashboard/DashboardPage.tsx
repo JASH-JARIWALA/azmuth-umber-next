@@ -12,7 +12,7 @@ import ShipmentOverview from 'src/views/pages/dashboard/ShipmentOverview'
 
 const Home = () => {
   return (
-    <Grid container spacing={6} sx={{ mt: 5 }}>
+    <Grid container spacing={6}>
       <Grid item xs={2}>
         <Cards icon={''} stats={''} title={'24.67k'} subtitle={'Total Order'} trendDiff={''} />
       </Grid>
